@@ -1,0 +1,133 @@
+@font-face {
+    font-family: "Chillax-Regular";
+    src: url("Fonts/Chillax-Regular.otf") format("opentype");
+}
+
+
+
+body {
+    background-color: rgb(0, 0, 255);
+font-family: "Chillax-Regular", serif;
+cursor: url(Datei/Milo\ Cursor.png) 0 0, default;
+}
+
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+.grid-container {
+    display: grid;
+    padding: 15px;
+    gap: 15px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+grid-template-areas: 
+"name name name bio"
+"image-1 image-1 image-1 text-1"
+"text-2 image-2 image-2 image-2"
+"image-3 image-3 image-3 text-3"
+}
+.name {
+    grid-area: name;
+    position: sticky;
+    top: 15px;
+    mix-blend-mode: difference;
+    z-index: 15;
+
+}
+.name h1:hover {
+    color: brown;
+}
+.name h1 {
+    text-align: center;
+    color: white;
+    transition: color 0.5s;
+}
+.name h1 {
+    font-size: 130px;
+}
+.bio {
+grid-area: bio;
+}
+.bio p {
+    color: coral;
+    font-size: 24px;
+    opacity: 1;
+    transition: opacity 0.3 ease;
+}
+.bio p:hover {
+    opacity: 0.5;
+}
+
+.image-1 {
+    grid-area: image-1;
+    position: relative;
+}
+
+.image-1 img {
+    transition: opacity 0.5s ease;
+
+}
+
+.image-1 .b {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+
+.image-1:hover .a {
+    opacity: 0;
+}
+
+.image-1:hover .b {
+    opacity: 1;
+}
+
+.image-2 {
+    grid-area: image-2;
+}
+
+.image-2 img {
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+    transition: box-shadow 0.3s ease;
+}
+
+.image-2 img:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 1.1);
+}
+
+.image-2 img {
+    transition: transform 0.5s ease;
+
+}
+.image-2 img:hover {
+    transform: scale(1.1) rotate(7deg);
+}
+
+
+
+.image-3 {
+    grid-area: image-3;
+}
+
+.image-3 img {
+    transition: 0.5s ease;
+}
+
+.image-3 img:hover {
+    transform: rotate(10deg);
+}
+
+.text-1 {
+    grid-area: text-1 ;
+}
+
+.text-2 {
+    grid-area: text-2 ;
+}
+
+.text-3 {
+    grid-area: text-3 ;
+}
+
