@@ -1,0 +1,62 @@
+
+.top-header {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 152pt;
+    width:100%;             /* volle Breite */
+    color: rgb(0, 0, 0);            /* weiße Schrift */
+    text-align: left;     /* zentriert über die Breite */
+    padding: 0px 0;         /* Abstand oben und unten */
+}
+
+.top-header h1 {
+    margin: 10px;       /* alle Standard-Margen entfernen */
+    font-size: 152pt;
+    line-height: 1;  /* optional: Höhe des Textes noch enger */
+}
+
+body {
+    height: 100vh; /* volle Höhe des Bildschirms */
+    margin: 0;
+    font-family: Arial, sans-serif;
+
+    /* Farbverlauf von Violet (#8a2be2) zu Blau (#1e90ff) */
+    background: linear-gradient(to top, #ffffff, #90990c, #088082, #ffffff);
+}
+
+.bio1 {
+    position: absolute;     /* absolut platzieren */
+    bottom: 20px;           /* Abstand vom unteren Rand */
+    left: 20px;             /* Abstand vom linken Rand */
+    font-size: 80px;        /* Größe des @ Symbols */
+    color: #000000;         /* Farbe weiß, kann beliebig sein */
+}
+
+.bio1 {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    font-size: 80px;
+}
+
+.bio1 a {
+    color: rgb(0, 0, 0);        /* Farbe des Symbols */
+    text-decoration: none; /* entfernt Unterstreichung */
+}
+
+.bio1 a:hover {
+    color: #00f2fe;      /* Farbe beim Hover */
+    cursor: pointer;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(12fr);
+    gap: 10px;
+    grid-template-areas: 
+    
+    
+    
+    
+    
+    ;
+}
