@@ -1,0 +1,232 @@
+body {
+    height: 100vh; /* volle Höhe des Bildschirms */
+    margin: 0;
+    font-family: Arial, sans-serif;
+
+    /* Farbverlauf von Violet (#8a2be2) zu Blau (#1e90ff) */
+    background: linear-gradient(to top, #000000, #000000);
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(12, 3fr);
+    padding: 15px;
+    gap: 10px;
+    grid-auto-flow: 50px;
+    grid-template-areas: 
+    "top-header top-header top-header top-header . . . . . . bio1 bio1"
+    "top-header top-header top-header top-header . . . . . . bio1 bio1"
+    ". . . . . . layout-1 layout-1 . . . ."
+    ". . . . . . layout-1 layout-1 . . . ."
+    ". . . . . . . . . . . ."
+    "layout-2 layout-2 layout-2 layout-2 layout-3 layout-3 layout-3 layout-3 layout-4 layout-4 layout-4 layout-4"
+    "layout-2 layout-2 layout-2 layout-2 layout-3 layout-3 layout-3 layout-3 layout-4 layout-4 layout-4 layout-4"
+    "layout-2 layout-2 layout-2 layout-2 layout-3 layout-3 layout-3 layout-3 layout-4 layout-4 layout-4 layout-4"
+    "layout-2 layout-2 layout-2 layout-2 layout-3 layout-3 layout-3 layout-3 layout-4 layout-4 layout-4 layout-4"
+    ". . . . . . . . . . . ."
+    ". . . . . . . . . . . ."
+    ". . . . . . . . . . . ."
+    ". . . . . . . . . . . ."
+    ". . . . . . . . . . . ."
+    ". . . . . . . . . . . ."
+    ". . . prepress-12 prepress-12 . . . . . . ."
+    ". . . prepress-12 prepress-12 . . . . . . ."
+    ". . . . . . . . . . . ."
+    "prepress-1 prepress-1 prepress-1 prepress-1 prepress-2 prepress-2 prepress-2 prepress-2 prepress-3 prepress-3 prepress-3 prepress-3"
+    "prepress-1 prepress-1 prepress-1 prepress-1 prepress-2 prepress-2 prepress-2 prepress-2 prepress-3 prepress-3 prepress-3 prepress-3"
+    "prepress-1 prepress-1 prepress-1 prepress-1 prepress-2 prepress-2 prepress-2 prepress-2 prepress-3 prepress-3 prepress-3 prepress-3"
+    "prepress-1 prepress-1 prepress-1 prepress-1 prepress-2 prepress-2 prepress-2 prepress-2 prepress-3 prepress-3 prepress-3 prepress-3"
+    ". . . . . . . . . . . ."
+    ". . . . . . . . . . . ."
+    ". . . . . . . . . . . ."
+    ". . . . . . . . . . . ."
+    ". . . . . . . . . . . ."
+    ". . . . . . . . . . . ."
+    ". . . . . typo-1 typo-1 . . . . ."
+    ". . . . . typo-1 typo-1 . . . . ."
+    ". . . . . . . . . . . ."
+    "typo-2 typo-2 typo-2 typo-2 typo-3 typo-3 typo-3 typo-3 typo-6 typo-6 typo-6 typo-6"
+    "typo-2 typo-2 typo-2 typo-2 typo-3 typo-3 typo-3 typo-3 typo-6 typo-6 typo-6 typo-6"
+    "typo-2 typo-2 typo-2 typo-2 typo-3 typo-3 typo-3 typo-3 typo-6 typo-6 typo-6 typo-6"
+    "typo-2 typo-2 typo-2 typo-2 typo-3 typo-3 typo-3 typo-3 typo-6 typo-6 typo-6 typo-6"
+    ". . . . . . . . . . . ."
+    ". . . . . . . . . . . ."
+    ". . . . . . . . . . . ."
+    ". . . . . . . . . . . ."
+    ". . . . . . . . . . . ."
+    ". . . . . . . . . . . ."
+    ". . . . bio bio bio bio . . . ."
+    ". . . . bio bio bio bio . . . ."
+    ". . . . . . . . . . . .";
+    
+}
+
+
+
+ 
+
+.top-header {
+  grid-area: top-header;
+     position: sticky;
+  top: 0;
+}
+
+.top-header h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10vw;
+    margin: 10px;       /* alle Standard-Margen entfernen */
+    line-height: 1;  /* optional: Höhe des Textes noch enger */
+     color: rgb(255, 255, 255);            /* weiße Schrift */
+    text-align: left;     /* zentriert über die Breite */
+     width:100%;             /* volle Breite */
+    padding: 0px 0;         /* Abstand oben und unten */
+    z-index: 999;
+}
+
+.bio {
+    grid-area: bio;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    position: sticky;
+    bottom: 27px;
+}
+
+.bio1 {
+  grid-area: bio1;
+  align-self: center;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+
+.bio1 a {
+    color: rgb(255, 255, 255);        /* Farbe des Symbols */
+    font-size: 80pt;
+    text-decoration: none;
+}
+
+.bio1 a:hover {
+    color: #c7c0c0;      /* Farbe beim Hover */
+    cursor: pointer;
+}
+
+.layout-1 {
+    grid-area: layout-1;
+}
+
+.layout-2 {
+    grid-area: layout-2;
+}
+
+.layout-3 {
+    grid-area: layout-3;
+}
+
+.layout-4 {
+    grid-area: layout-4;
+}
+
+.prepress-12 {
+    grid-area: prepress-12;
+}
+
+.prepress-1 {
+    grid-area: prepress-1;
+}
+
+.prepress-2 {
+    grid-area: prepress-2;
+}
+
+.prepress-3 {
+    grid-area: prepress-3;
+}
+
+.typo-1 {
+    grid-area: typo-1;
+}
+
+.typo-2 {
+    grid-area: typo-2;
+}
+
+.typo-3 {
+    grid-area: typo-3;
+}
+
+.typo-6 {
+    grid-area: typo-6;
+}
+
+
+
+.layout-2,
+.layout-3,
+.layout-4 {
+    opacity: 0;
+    transition: opacity 0.3 ease;
+}
+
+.layout-1:hover ~ .layout-2 {
+    opacity: 1;
+}
+
+.layout-1:hover ~ .layout-3 {
+    opacity: 1;
+}
+
+.layout-1:hover ~ .layout-4 {
+    opacity: 1;
+}
+
+
+.prepress-1,
+.prepress-2,
+.prepress-3 {
+    opacity: 0;
+    transition: opacity 0.3 ease;
+}
+
+.prepress-12:hover ~ .prepress-1 {
+    opacity: 1;
+}
+
+.prepress-12:hover ~ .prepress-2 {
+    opacity: 1;
+}
+
+.prepress-12:hover ~ .prepress-3 {
+    opacity: 1;
+}
+
+.typo-2,
+.typo-3,
+.typo-6 {
+    opacity: 0;
+    transition: opacity 0.3 ease;
+}
+
+.typo-1:hover ~ .typo-2 {
+    opacity: 1;
+}
+
+.typo-1:hover ~ .typo-3 {
+    opacity: 1;
+}
+
+.typo-1:hover ~ .typo-6 {
+    opacity: 1;
+}
+
+
+
+
+

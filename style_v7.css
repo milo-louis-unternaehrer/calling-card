@@ -58,32 +58,35 @@ body {
     ". . . . . . Prepress-12 Prepress-12 . . . ."
     ". . . . . . Prepress-12 Prepress-12 . . . ."
     ". . . . . . . . . . . ."
-    "prepress-1 prepress-1 prepress-1 prepress-1 prepress-2 prepress-2 prepress-2 prepress-2 prepress-3 prepress-3 prepress-3 prepress-3";
+    "prepress-1 prepress-1 prepress-1 prepress-1 prepress-2 prepress-2 prepress-2 prepress-2 prepress-3 prepress-3 prepress-3 prepress-3"
+    "prepress-1 prepress-1 prepress-1 prepress-1 prepress-2 prepress-2 prepress-2 prepress-2 prepress-3 prepress-3 prepress-3 prepress-3"
+    "prepress-1 prepress-1 prepress-1 prepress-1 prepress-2 prepress-2 prepress-2 prepress-2 prepress-3 prepress-3 prepress-3 prepress-3"
+    "prepress-1 prepress-1 prepress-1 prepress-1 prepress-2 prepress-2 prepress-2 prepress-2 prepress-3 prepress-3 prepress-3 prepress-3"
+    ". . . . . . . . . . . ."
+    ". . . . . . . . . . . ."
+    ". . . . . . . . . . . ."
+    ;
     
-    
-    
-    
 }
 
-
-
-/* Code für text aufdecken wenn man Bild Hoverd */
-.text-1
-.text-2
-.text-3 {
-    opacity: 0;
-    transition: opacity 0.3s ease;
-
+.top-header {
+  grid-area: top-header;
 }
 
-.image-1:hover ~.text-1 {
-    opacity: 1;
+.bio1 {
+  grid-area: bio1;
 }
 
-.image-2:hover ~.text-1 {
-    opacity: 1;
-}
+/* "top-header top-header top-header top-header . . . . . . bio1 bio1"
+    "top-header top-header top-header top-header . . . . . . bio1 bio1"
+    ". . . . . . Prepress-12 Prepress-12 . . . ."
+    ". . . . . . Prepress-12 Prepress-12 . . . ."
+    ". . . . . . . . . . . ."
+    "prepress-1 prepress-1 prepress-1 prepress-1 prepress-2 prepress-2 prepress-2 prepress-2 prepress-3 prepress-3 prepress-3 prepress-3"
+    "prepress-1 prepress-1 prepress-1 prepress-1 prepress-2 prepress-2 prepress-2 prepress-2 prepress-3 prepress-3 prepress-3 prepress-3"
+    "prepress-1 prepress-1 prepress-1 prepress-1 prepress-2 prepress-2 prepress-2 prepress-2 prepress-3 prepress-3 prepress-3 prepress-3"
+    "prepress-1 prepress-1 prepress-1 prepress-1 prepress-2 prepress-2 prepress-2 prepress-2 prepress-3 prepress-3 prepress-3 prepress-3"
+    ". . . . . . . . . . . ."
+    ". . . . bio bio bio bio . . . ."
+    ". . . . bio bio bio bio . . . ." */
 
-.image-3:hover ~.text-1 {
-    opacity: 1;
-}
