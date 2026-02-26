@@ -15,7 +15,8 @@ body {
     height: 100vh; 
     margin: 0;
     font-family: 'Switzer', sans-serif;
-    background: linear-gradient(to top, #000000, #000000);
+    /* background: linear-gradient(to top, #000000, #000000); */
+    background-color: #000000;
 }
 
 img {
@@ -99,6 +100,7 @@ img {
 .bio {
     grid-area: bio;
     color: rgb(255, 255, 255);
+    line-height: 18.8px;
     text-align: center;
     position: sticky;
     bottom: 27px;
@@ -109,7 +111,7 @@ img {
   align-self: center;
   text-align: center;
   position: sticky;
-  top: 0px 0;
+  top: 10px;
   z-index: 999;
 }
 
