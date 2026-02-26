@@ -1,9 +1,20 @@
-body {
-    height: 100vh; /* volle Höhe des Bildschirms */
-    margin: 0;
-    font-family: Arial, sans-serif;
+@font-face {
+  font-family: 'Switzer';
+  src: url('../fonts/Switzer-Regular.woff2') format('woff2');
+  font-weight: 400;
+}
 
-    /* Farbverlauf von Violet (#8a2be2) zu Blau (#1e90ff) */
+@font-face {
+  font-family: 'Switzer';
+  src: url('../fonts/Switzer-Black.woff2') format('woff2');
+  font-weight: 900;
+}
+
+
+body {
+    height: 100vh; 
+    margin: 0;
+    font-family: 'Switzer', sans-serif;
     background: linear-gradient(to top, #000000, #000000);
 }
 
@@ -22,8 +33,8 @@ img {
     grid-template-areas: 
     "top-header top-header top-header top-header . . . . . . bio1 bio1"
     "top-header top-header top-header top-header . . . . . . bio1 bio1"
+    ". . . . text-1 . layout-1 layout-1 . . . ."
     ". . . . . . layout-1 layout-1 . . . ."
-    ". . . . . . layout-1 layout-1 . . . ."
     ". . . . . . . . . . . ."
     "layout-2 layout-2 layout-2 layout-2 layout-3 layout-3 layout-3 layout-3 layout-4 layout-4 layout-4 layout-4"
     "layout-2 layout-2 layout-2 layout-2 layout-3 layout-3 layout-3 layout-3 layout-4 layout-4 layout-4 layout-4"
@@ -35,8 +46,8 @@ img {
     ". . . . . . . . . . . ."
     ". . . . . . . . . . . ."
     ". . . . . . . . . . . ."
+    ". . . prepress-12 prepress-12 . text-2 text-2 . . . ."
     ". . . prepress-12 prepress-12 . . . . . . ."
-    ". . . prepress-12 prepress-12 . . . . . . ."
     ". . . . . . . . . . . ."
     "prepress-1 prepress-1 prepress-1 prepress-1 prepress-2 prepress-2 prepress-2 prepress-2 prepress-3 prepress-3 prepress-3 prepress-3"
     "prepress-1 prepress-1 prepress-1 prepress-1 prepress-2 prepress-2 prepress-2 prepress-2 prepress-3 prepress-3 prepress-3 prepress-3"
@@ -48,7 +59,7 @@ img {
     ". . . . . . . . . . . ."
     ". . . . . . . . . . . ."
     ". . . . . . . . . . . ."
-    ". . . . . typo-1 typo-1 . . . . ."
+    ". . . text-3 . typo-1 typo-1 . . . . ."
     ". . . . . typo-1 typo-1 . . . . ."
     ". . . . . . . . . . . ."
     "typo-2 typo-2 typo-2 typo-2 typo-3 typo-3 typo-3 typo-3 typo-6 typo-6 typo-6 typo-6"
@@ -67,10 +78,6 @@ img {
     
 }
 
-
-
- 
-
 .top-header {
   grid-area: top-header;
      position: sticky;
@@ -78,14 +85,14 @@ img {
 }
 
 .top-header h1 {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Switzer', sans-serif;
     font-size: 10vw;
-    margin: 10px;       /* alle Standard-Margen entfernen */
-    line-height: 1;  /* optional: Höhe des Textes noch enger */
-     color: rgb(255, 255, 255);            /* weiße Schrift */
-    text-align: left;     /* zentriert über die Breite */
-     width:100%;             /* volle Breite */
-    padding: 0px 0;         /* Abstand oben und unten */
+    margin: 10px;       
+    line-height: 1;  
+     color: rgb(255, 255, 255);            
+    text-align: left;     
+     width:100%;             
+    padding: 0px 0;         
     z-index: 999;
 }
 
@@ -108,13 +115,13 @@ img {
 
 
 .bio1 a {
-    color: rgb(255, 255, 255);        /* Farbe des Symbols */
-    font-size: 80pt;
+    color: rgb(255, 255, 255);        
+    font-size: 50pt;
     text-decoration: none;
 }
 
 .bio1 a:hover {
-    color: #c7c0c0;      /* Farbe beim Hover */
+    color: #c7c0c0;      
     cursor: pointer;
 }
 
@@ -167,12 +174,30 @@ img {
 }
 
 
+.text-1 {
+    grid-area: text-1;
+}
+
+.text-2 {
+    grid-area: text-2;
+}
+
+.text-3 {
+    grid-area: text-3;
+}
+
+.text-1,
+.text-2,
+.text-3 {
+    color: white;
+}
 
 .layout-2,
 .layout-3,
-.layout-4 {
+.layout-4,
+.text-1 {
     opacity: 0;
-    transition: opacity 0.3 ease;
+    transition: opacity 0.5s ease;
 }
 
 .layout-1:hover ~ .layout-2 {
@@ -187,12 +212,16 @@ img {
     opacity: 1;
 }
 
+.layout-1:hover ~ .text-1 {
+    opacity: 1;
+}
 
 .prepress-1,
 .prepress-2,
-.prepress-3 {
+.prepress-3,
+.text-2 {
     opacity: 0;
-    transition: opacity 0.3 ease;
+    transition: opacity 0.5s ease;
 }
 
 .prepress-12:hover ~ .prepress-1 {
@@ -207,11 +236,17 @@ img {
     opacity: 1;
 }
 
+.prepress-12:hover ~ .text-2 {
+    opacity: 1;
+}
+
+
 .typo-2,
 .typo-3,
-.typo-6 {
+.typo-6,
+.text-3 {
     opacity: 0;
-    transition: opacity 0.3 ease;
+    transition: opacity 0.5s ease;
 }
 
 .typo-1:hover ~ .typo-2 {
@@ -226,7 +261,9 @@ img {
     opacity: 1;
 }
 
-
+.typo-1:hover ~ .text-3 {
+    opacity: 1;
+}
 
 
 
